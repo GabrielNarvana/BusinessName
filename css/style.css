@@ -25,6 +25,11 @@ h1 {
 #myBtn1 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
+  cursor: pointer;
+}
+
+#myBtn1:hover {
+  color: #ff0055
 }
 
 #img-logo {
@@ -103,9 +108,10 @@ nav {
   background-color: #fc0146;
   border-color: #fc0146;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -116,6 +122,14 @@ nav {
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease-out;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .modal-content {
@@ -125,6 +139,12 @@ nav {
   border: 10px solid #fc0146;
   width: 80%;
   font-family: Arial, Helvetica, sans-serif;
+  transform: scale(.7);
+  transition: .2s ease-in;
+}
+
+.modal.active .modal-content {
+  transform: scale(1);
 }
 
 .close {
@@ -142,16 +162,19 @@ nav {
 }
 .zoo {
   padding: 50px;
-  transition: transform 0.2s;
   width: 200px;
   height: 200px;
   margin: 0 auto;
+  transition: 0.5s;
 }
 
 .zoom:hover {
   -ms-transform: scale(1.5);
   transform: scale(1.5);
+  transition: 0.5s;
+  
 }
+
 .esp1 {
   max-width: 100%;
 }

@@ -7,20 +7,20 @@ var btn1 = document.getElementById("myBtn1");
 var span = document.getElementsByClassName("close")[0];
 
 btn.onclick = function() {
-  modal.style.display = "block";
+  modal.classList.add('active');
 };
 
 btn1.onclick = function() {
-  modal.style.display = "block";
+  modal.classList.add('active');
 };
 
 span.onclick = function() {
-  modal.style.display = "none";
+  modal.classList.remove('active')
 };
 
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
+    modal.classList.remove('active')
   }
 };
 
@@ -28,7 +28,7 @@ var tWidth = "1125px";
 var tHeight = "24px";
 var tcolour = "#fc0146";
 var fontfamily = "arial";
-var moStop = true;
+var moStop = false;
 var tSpeed = 6;
 
 var content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
