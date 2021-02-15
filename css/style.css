@@ -160,19 +160,11 @@ nav {
   text-decoration: none;
   cursor: pointer;
 }
-.zoo {
-  padding: 50px;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto;
-  transition: 0.5s;
-}
 
 .zoom:hover {
   -ms-transform: scale(1.5);
   transform: scale(1.5);
   transition: 0.5s;
-  
 }
 
 .esp1 {
